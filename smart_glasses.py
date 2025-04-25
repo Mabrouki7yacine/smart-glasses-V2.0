@@ -33,9 +33,8 @@ def rescaleFrame(frame, scale=0.5):
     return cv2.resize(frame, dimensions, interpolation=cv2.INTER_AREA)
 
 def clean_text(text):
-    # Remove unwanted characters and replace newlines with spaces
-    text = re.sub(r'[|]', '', text)  # Remove specific unwanted characters
-    text = text.replace('\n', ' ')  # Replace newlines with spaces
+    text = re.sub(r'[|]', '', text)
+    text = text.replace('\n', ' ')
     text = unidecode.unidecode(text)
     return text
 
