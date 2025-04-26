@@ -4,8 +4,8 @@
 #include "wifi_connect.h"
 
 
-#define WIFI_SSID "simple"
-#define WIFI_PASS "ve8az78eb"
+#define WIFI_SSID "ssid"
+#define WIFI_PASS "pass"
 
 static void wifi_event_handler(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
