@@ -101,7 +101,7 @@ def get_AI_assistant():
     response = jsonify(info), 200
     return response
 
-'''def handle():
+def handle():
     global info, my_faces
     while True: 
         while menu == 1:
@@ -158,11 +158,10 @@ def get_AI_assistant():
             else : 
                 cleaned_text = "no text detected"
                 info['data'] = cleaned_text
-                print(cleaned_text)'''
+                print(cleaned_text)
 
 if __name__ == '__main__':
-    #show_thread = threading.Thread(target=handle)
-    #show_thread.daemon = True
-    #show_thread.start()
-    #app.run(host='0.0.0.0', port=5000, threaded=True)  # Run Flask in threaded mode
-    app.run(host='0.0.0.0', port=5000)
+    show_thread = threading.Thread(target=handle)
+    show_thread.daemon = True
+    show_thread.start()
+    app.run(host='0.0.0.0', port=5000, threaded=True)  # Run Flask in threaded mode
